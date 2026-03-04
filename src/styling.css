@@ -1,0 +1,244 @@
+:root {
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: #1f2933;
+  background: linear-gradient(180deg, #f4f7fb 0%, #eaf4ee 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+
+.sidebar {
+  padding: 1rem;
+  background: #183a2d;
+  color: #fff;
+}
+
+.sidebar h1 {
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  display: block;
+  margin: 0.35rem 0;
+  color: #d9efe2;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background: #2f6f4f;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.weather {
+  background: #ffffff;
+  border: 1px solid #d9e2ea;
+  border-radius: 10px;
+  padding: 0.6rem;
+  max-width: 320px;
+}
+
+.weather p,
+.weather h3 {
+  margin: 0.25rem 0;
+}
+
+.weather img {
+  width: 56px;
+  height: 56px;
+}
+
+.weather-controls {
+  display: flex;
+  gap: 0.4rem;
+  margin: 0.35rem 0;
+}
+
+.search-area {
+  position: relative;
+  min-width: 280px;
+}
+
+.search-area form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-area input,
+select,
+label input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #b8c6cf;
+}
+
+.search-results {
+  position: absolute;
+  z-index: 10;
+  top: 44px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+}
+
+.result-item {
+  width: 100%;
+  border: 0;
+  background: #fff;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.result-item:hover {
+  background: #eef7ff;
+}
+
+main {
+  padding: 0 1rem 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(35, 55, 80, 0.08);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+button {
+  border: none;
+  background: #2f6f4f;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1f5138;
+}
+
+.users-grid,
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.user-card,
+.game-card {
+  border: 1px solid #e0e5ea;
+  border-radius: 10px;
+  background: #fff;
+  color: inherit;
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.user-card img,
+.game-card img,
+.timer-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.timer-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1rem;
+}
+
+.timer-box {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.6rem 0;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.chart-card {
+  border: 1px solid #e0e5ea;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.error-text {
+  color: #b32323;
+}
+
+.success-text {
+  color: #1f7a3a;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .timer-layout {
+    grid-template-columns: 1fr;
+  }
+}
