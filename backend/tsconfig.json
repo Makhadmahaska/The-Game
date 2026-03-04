@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "target": "ES2023",
-    "strict": true,
-    "esModuleInterop": true,
-    "ignoreDeprecations": "6.0"
-  }
+    "target": "ES2023",                  // Latest JS features
+    "module": "ESNext",                  // Use ES modules
+    "moduleResolution": "node",          // Resolve imports like Node.js
+    "strict": true,                       // Enable strict type checking
+    "esModuleInterop": true,              // Allows default imports from commonjs modules
+    "forceConsistentCasingInFileNames": true, 
+    "skipLibCheck": true,                 // Skip type checks for node_modules
+    "resolveJsonModule": true,            // Allow importing JSON files
+    "noEmit": true                        // Do not output compiled JS (for ts-node)
+  },
+  "include": ["src"],                     // Include all TS files under src/
+  "exclude": ["node_modules"]             // Exclude dependencies
 }
-
